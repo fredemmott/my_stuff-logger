@@ -18,8 +18,8 @@ module MyStuff::Logger
       end
 
       @filters = (options[:filters] || [
-        ReaderFilters::PriorityColors,
-      ]).map(&:to_proc)
+        :PriorityColors,
+      ]).map{ |filter| ReaderFilters.get(filter) }
     end
 
     # Read lines from IO, and pretty-print them.
