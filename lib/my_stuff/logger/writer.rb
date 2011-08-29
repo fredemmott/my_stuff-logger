@@ -78,7 +78,7 @@ module MyStuff
       end
 
       def pretty_caller x
-        x.sub(root_path + '/', '')
+        x.sub(root_path + '/', '').sub(/^.\//, '')
       end
     end
   end
