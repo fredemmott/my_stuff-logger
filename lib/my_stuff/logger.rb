@@ -1,5 +1,6 @@
 # Copyright 2011-present Fred Emmott. See COPYING file.
 
+require 'my_stuff/logger/reader'
 require 'my_stuff/logger/writer'
 
 module MyStuff
@@ -12,7 +13,7 @@ module MyStuff
       attr_writer :device, :level, :backtrace_level, :root_path
 
       def device
-        @device ||= STDOUT
+        @device ||= STDOUT.tty? ? MyStuff::Logger::Reader.new : STDOUT
       end
 
       def level
