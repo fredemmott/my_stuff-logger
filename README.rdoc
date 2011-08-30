@@ -1,0 +1,49 @@
+= What is this?
+
+A drop-in replacement for Ruby's standard Logger class, if you're just
+using the basic features.
+
+= Why would I use it instead?
+
+http://f.cl.ly/items/1M0f083q0Q3p3u103a3o/Image%202011.08.30%2008:06:08.png
+
+== It's got more information
+
+* The filename, line number, and method are *always* included
+* By default, a backtrace is included for errors and fatals. This can be
+  tuned to any level, including even for debug, or for none at all.
+
+File names are shown relative to a choosable root (which defaults to
+File.dirname(File.expand_path($0))) — if a file isn't in that root, you
+get the full path, not '../../../../../../foo/bar/baz' :p
+
+= It's easier to see what's important
+
+http://f.cl.ly/items/412Q3F0J0a1O0910122Y/Image%202011.08.30%2008:13:03.png
+
+= You can choose what's important
+
+There's per-app settings for where output goes, what levels are logged,
+and what levels get backtraces — but you can also change this per-instance,
+and it'll stick that way even if the global is changed later.
+
+= You can plug in your own filters to make the log messages more readable
+
+A couple of examples:
+
+* The priority colorization is a filter
+* There's also a filter shipped (but not enabled by default) for use with
+  {MyStuff::MultiDB}[https://github.com/fredemmott/my_stuff-multidb], which
+  turns 'Foo::MYSTUFF_MULTIDB_DB_aloadofhex::Bar' into
+  'Foo::<localhost:3307/test>::Bar'
+
+These filters are only enabled for log viewing; they don't affect what's
+written to disk.
+
+By default, colors are enabled if the output device (STDOUT usually) is
+a TTY, but disabled otherwised — of course, this can be overidden.
+
+= What's coming soon?
+
+* a 'msl-cat' command, applying the filters
+* a 'msl-tail' command, emulating/wrapping 'tail -F'
