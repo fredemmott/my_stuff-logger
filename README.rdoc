@@ -28,7 +28,7 @@ get the full path, not '../../../../../../foo/bar/baz' :p
 
 == it's easier to see what's important
 
-http://f.cl.ly/items/412Q3F0J0a1O0910122Y/Image%202011.08.30%2008:13:03.png
+http://f.cl.ly/items/1I0p3c3J2i1u0D1E3Q3s/Image%202011.08.30%2020:05:20.png
 
 == You can choose what's important
 

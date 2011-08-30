@@ -60,7 +60,7 @@ end
 def spam logger
   puts '=== Spamming All Log Levels ==='
   logger.debug 'nyan nyan nyan'
-  logger.info Hash.new(:what => 'cool story bro')
+  logger.info ({:what => 'cool story bro'})
   logger.warn "IMA CHARGIN' MAH LAZER"
   logger.error "Somebody set us up the bomb"
   logger.fatal "No more kitten pictures."
