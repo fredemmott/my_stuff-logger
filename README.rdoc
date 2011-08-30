@@ -3,6 +3,15 @@
 A drop-in replacement for Ruby's standard Logger class, if you're just
 using the basic features.
 
+= How do I get it?
+
+ gem install my_stuff-logger
+
+= How do I use it?
+
+Create an instance, then just like the standard Logger class; take a look
+at example.rb.
+
 = Why would I use it instead?
 
 http://f.cl.ly/items/1M0f083q0Q3p3u103a3o/Image%202011.08.30%2008:06:08.png
