@@ -26,17 +26,17 @@ File names are shown relative to a choosable root (which defaults to
 File.dirname(File.expand_path($0))) — if a file isn't in that root, you
 get the full path, not '../../../../../../foo/bar/baz' :p
 
-= It's easier to see what's important
+== it's easier to see what's important
 
 http://f.cl.ly/items/412Q3F0J0a1O0910122Y/Image%202011.08.30%2008:13:03.png
 
-= You can choose what's important
+== You can choose what's important
 
 There's per-app settings for where output goes, what levels are logged,
 and what levels get backtraces — but you can also change this per-instance,
 and it'll stick that way even if the global is changed later.
 
-= You can plug in your own filters to make the log messages more readable
+== You can plug in your own filters to make the log messages more readable
 
 A couple of examples:
 
