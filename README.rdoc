@@ -26,7 +26,7 @@ File names are shown relative to a choosable root (which defaults to
 File.dirname(File.expand_path($0))) — if a file isn't in that root, you
 get the full path, not '../../../../../../foo/bar/baz' :p
 
-== it's easier to see what's important
+== It's easier to see what's important
 
 http://f.cl.ly/items/1I0p3c3J2i1u0D1E3Q3s/Image%202011.08.30%2020:05:20.png
 
