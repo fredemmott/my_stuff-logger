@@ -52,6 +52,12 @@ written to disk.
 By default, colors are enabled if the output device (STDOUT usually) is
 a TTY, but disabled otherwised — of course, this can be overidden.
 
+== It's easier/faster to machine-process
+
+* The number in the second field is a unix timestamp
+* The filename is always in the same place, in the same format, making it
+  easier to use with grep, or something more in-depth.
+
 = What's coming soon?
 
 * a 'msl-cat' command, applying the filters
