@@ -43,13 +43,22 @@ optparse.parse!
 require 'my_stuff/logger'
 require 'my_stuff/logger/reader'
 
+require 'logger' # Ruby's standard one
+
 # We set the output device of the logger to be the reader.
 # This gives us rainbows and unicorns — well, colourized output at least.
 reader = MyStuff::Logger::Reader.new(options)
 options[:device] = reader
 logger = MyStuff::Logger.new(options)
 
+def compare logger
+  puts '=== Comparison ==='
+  Logger.new(STDOUT).error "This is Ruby's standard Logger"
+  logger.error "This is MyStuff::Logger"
+end
+
 def spam logger
+  puts '=== Spamming All Log Levels ==='
   logger.debug 'nyan nyan nyan'
   logger.info Hash.new(:what => 'cool story bro')
   logger.warn "IMA CHARGIN' MAH LAZER"
@@ -57,4 +66,5 @@ def spam logger
   logger.fatal "No more kitten pictures."
 end
 
+compare logger
 spam logger
