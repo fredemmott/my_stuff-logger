@@ -16,7 +16,7 @@ at example.rb.
 
 http://f.cl.ly/items/1M0f083q0Q3p3u103a3o/Image%202011.08.30%2008:06:08.png
 
-== It's got more information
+== It's got more information.
 
 * The filename, line number, and method are *always* included
 * By default, a backtrace is included for errors and fatals. This can be
@@ -26,17 +26,17 @@ File names are shown relative to a choosable root (which defaults to
 File.dirname(File.expand_path($0))) — if a file isn't in that root, you
 get the full path, not '../../../../../../foo/bar/baz' :p
 
-== It's easier to see what's important
+== It's easier to see what's important.
 
 http://f.cl.ly/items/1I0p3c3J2i1u0D1E3Q3s/Image%202011.08.30%2020:05:20.png
 
-== You can choose what's important
+== You can choose what's relevant.
 
 There's per-app settings for where output goes, what levels are logged,
 and what levels get backtraces — but you can also change this per-instance,
 and it'll stick that way even if the global is changed later.
 
-== You can plug in your own filters to make the log messages more readable
+== You can plug in your own filters to make the log messages more readable.
 
 A couple of examples:
 
@@ -52,7 +52,7 @@ written to disk.
 By default, colors are enabled if the output device (STDOUT usually) is
 a TTY, but disabled otherwised — of course, this can be overidden.
 
-== It's easier/faster to machine-process
+== It's easier/faster to machine-process.
 
 * The number in the second field is a unix timestamp
 * The filename is always in the same place, in the same format, making it
