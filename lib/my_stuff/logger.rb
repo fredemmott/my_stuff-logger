@@ -1,7 +1,11 @@
 # Copyright 2011-present Fred Emmott. See COPYING file.
 
+# Dependencies
 require 'my_stuff/logger/reader'
 require 'my_stuff/logger/writer'
+
+# Extra stuff
+require 'my_stuff/logger/l'
 
 module MyStuff
   module Logger

@@ -45,6 +45,9 @@ require 'my_stuff/logger/reader'
 
 require 'logger' # Ruby's standard one
 
+MyStuff::Logger.level = options[:level]
+MyStuff::Logger.backtrace_level = options[:backtrace_level]
+
 # We set the output device of the logger to be the reader.
 # This gives us rainbows and unicorns — well, colourized output at least.
 reader = MyStuff::Logger::Reader.new(options)
@@ -66,5 +69,6 @@ def spam logger
   logger.fatal "No more kitten pictures."
 end
 
+l 'Debug statement'
 compare logger
 spam logger
