@@ -17,11 +17,11 @@ module MyStuff
       end
 
       def level
-        @level ||= :info
+        @level ||= (ENV['MYSTUFF_LOGLEVEL'] || :info).to_sym
       end
 
       def backtrace_level
-        @backtrace_level ||= :error
+        @backtrace_level ||= (ENV['MYSTUFF_BTLEVEL'] || :error).to_sym
       end
 
       def root_path
