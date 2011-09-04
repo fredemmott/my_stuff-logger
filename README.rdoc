@@ -36,6 +36,10 @@ There's per-app settings for where output goes, what levels are logged,
 and what levels get backtraces — but you can also change this per-instance,
 and it'll stick that way even if the global is changed later.
 
+You can also change the defaults via environment variables:
+* <tt>MYSTUFF_LOGLEVEL</tt>
+* <tt>MYSTUFF_BTLEVEL</tt>
+
 == You can plug in your own filters to make the log messages more readable.
 
 A couple of examples:
