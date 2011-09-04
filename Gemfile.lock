@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    my_stuff-logger (0.0.1)
+    my_stuff-logger (0.0.2)
 
 GEM
   remote: http://rubygems.org/
