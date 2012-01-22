@@ -10,6 +10,13 @@ describe MyStuff::Logger do
     )
   end
 
+  it 'should use a device passed to new' do
+    io = StringIO.new
+    logger = MyStuff::Logger.new(io)
+    logger.fatal 'foo'
+    io.string.should_not be_empty
+  end
+
   shared_examples_for 'an enabled logger' do
     before :each do
       @message = 'herpityderpirty' + rand.to_s

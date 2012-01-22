@@ -19,7 +19,18 @@ module MyStuff
       ]
       attr_writer *OVERRIDABLE_OPTIONS
 
-      def initialize options = {}
+      def initialize *args # IO, options
+        if args.last.is_a? Hash
+          options = args.pop
+        else
+          options = {}
+        end
+
+        raise ArgumentError.new 'too many arguments' if args.count > 1
+        unless args.empty?
+          options[:device] = args.first
+        end
+
         OVERRIDABLE_OPTIONS.each do |opt|
           if options.include? opt
             instance_variable_set "@#{opt}", options[opt]
