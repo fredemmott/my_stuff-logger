@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-require 'rake'
 
 Gem::Specification.new do |s|
   s.name          = 'my_stuff-logger'
@@ -12,10 +11,10 @@ Gem::Specification.new do |s|
   s.summary       = 'Logging class'
   s.description   = ''
   s.license       = 'ISC'
-  s.files         = FileList[
+  s.files         = Dir[
     'COPYING',
     'README.rdoc',
     'example.rb',
     'lib/**/*.rb',
-  ].to_a
+  ]
 end
