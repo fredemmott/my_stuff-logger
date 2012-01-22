@@ -47,7 +47,7 @@ Then /^I should get.+(lines?)$/ do |mode|
 end
 
 Then /^(?:it|the first) should begin with '([A-Z])'$/ do |prefix|
-  @first[0].should == prefix
+  @first[0,1].should == prefix
 end
 
 Then /^it should include the current timestamp$/ do

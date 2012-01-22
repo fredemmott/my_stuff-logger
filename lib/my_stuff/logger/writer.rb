@@ -36,7 +36,7 @@ module MyStuff
         return if LEVELS[level] < LEVELS[self.level]
 
         message  = "%s %s @%s> %s\n" % [
-          level.to_s[0].upcase, # D|I|W|E|F
+          level.to_s[0,1].upcase, # D|I|W|E|F
           Time.new.strftime("%s [%Y-%m-%d %H:%M:%S %z]"),
           pretty_caller(outer_caller.first),
           log_text(*args)
