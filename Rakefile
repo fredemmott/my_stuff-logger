@@ -1,13 +1,29 @@
 require 'rubygems'
+require 'rubygems/package_task'
 require 'rspec/core/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)
 
-# I'm not using the Gem/PackageTask as I'm strongly of the opinion that
-# 'gem build *.gemspec' should work.
-task :gem => :test do
-  system 'gem build my_stuff-logger.gemspec'
+gemspec = Gem::Specification.new do |s|
+  s.name          = 'my_stuff-logger'
+  s.version       = '0.0.4'
+  s.platform      = Gem::Platform::RUBY
+  s.authors       = ['Fred Emmott']
+  s.email         = ['mail@fredemmott.co.uk']
+  s.require_paths = ['lib']
+  s.homepage      = 'https://github.com/fredemmott/my_stuff-logger'
+  s.summary       = 'Logging class'
+  s.license       = 'ISC'
+  s.files         = Dir[
+    'COPYING',
+    'README.rdoc',
+    'example.rb',
+    'lib/**/*.rb',
+  ]
+end
+Gem::PackageTask.new(gemspec) do |pkg|
+  pkg.need_tar = true
 end
 
 task :test => :spec
-task :default => :gem
+task :default => [:package, :test]
