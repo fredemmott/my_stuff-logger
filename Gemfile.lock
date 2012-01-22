@@ -1,8 +1,3 @@
-PATH
-  remote: .
-  specs:
-    my_stuff-logger (0.0.4)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -21,6 +16,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  my_stuff-logger!
   rake (~> 0.9)
   rspec (~> 2.8)

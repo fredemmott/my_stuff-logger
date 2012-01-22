@@ -1,5 +1,4 @@
 source :rubygems
-gemspec
 
 group :test do
   gem 'rake', '~> 0.9'
